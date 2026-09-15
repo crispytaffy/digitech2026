@@ -2,7 +2,9 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>宇部市 赤ちゃんの駅MAP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>わたしのまちMAP</title>
 
   <!-- Leaflet -->
   <link
@@ -15,6 +17,15 @@
   </script>
 
   <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    h1 {
+      margin: 16px;
+    }
+
     #map {
       height: 600px;
     }
@@ -23,13 +34,16 @@
 
 <body>
 
-  <h1>宇部市 赤ちゃんの駅MAP</h1>
+  <h1>わたしのまちMAP</h1>
 
   <div id="map"></div>
 
   <script>
-    // 宇部市周辺を中心に地図を表示
-    const map = L.map('map').setView([33.95, 131.25], 13);
+
+    // 地図を作成
+    // 最初は山口県付近を表示
+    const map = L.map('map').setView([34.18, 131.47], 9);
+
 
     // OpenStreetMapを背景地図として表示
     L.tileLayer(
@@ -39,25 +53,55 @@
       }
     ).addTo(map);
 
+
     // GeoJSONを読み込む
-    fetch('./data/ube_babystation.geojson')
+    fetch('./data/mapdata.geojson')
+
       .then(response => response.json())
+
       .then(data => {
 
-        L.geoJSON(data, {
+        const geojsonLayer = L.geoJSON(data, {
 
           onEachFeature: function(feature, layer) {
 
             const p = feature.properties;
 
-            layer.bindPopup(`
-              <strong>${p.name}</strong><br>
-              ${p.address}
-            `);
+            // ポップアップの内容を作る
+            let popup = '';
+
+            if (p.name) {
+              popup += `<strong>${p.name}</strong><br>`;
+            }
+
+            if (p.category) {
+              popup += `カテゴリー：${p.category}<br>`;
+            }
+
+            if (p.address) {
+              popup += `住所：${p.address}<br>`;
+            }
+
+            if (p.description) {
+              popup += `${p.description}<br>`;
+            }
+
+            layer.bindPopup(popup);
+
           }
 
         }).addTo(map);
 
+
+        // データ全体が見えるように地図を自動調整
+        if (geojsonLayer.getBounds().isValid()) {
+          map.fitBounds(geojsonLayer.getBounds());
+        }
+
+      })
+
+      .catch(error => {
+        console.error('GeoJSONの読み込みに失敗しました:', error);
       });
 
   </script>
