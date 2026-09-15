@@ -1,0 +1,56 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.246,
+          33.951
+        ]
+      },
+      "properties": {
+        "name": "サンプル公園",
+        "category": "公園",
+        "address": "山口県○○市サンプル町1-1",
+        "description": "休憩できる公園です",
+        "hours": "終日"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.252,
+          33.955
+        ]
+      },
+      "properties": {
+        "name": "サンプル交流館",
+        "category": "公共施設",
+        "address": "山口県○○市サンプル町2-2",
+        "description": "地域の交流施設です",
+        "hours": "9:00-17:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.258,
+          33.947
+        ]
+      },
+      "properties": {
+        "name": "サンプル広場",
+        "category": "広場",
+        "address": "山口県○○市サンプル町3-3",
+        "description": "イベントにも使われる広場です",
+        "hours": "終日"
+      }
+    }
+  ]
+}

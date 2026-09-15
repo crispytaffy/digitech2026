@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>わたしのまちマップ</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>body{margin:0;font-family:sans-serif}h1{margin:16px;font-size:1.4rem}#map{height:calc(100vh - 70px)}</style>
+</head>
+<body>
+<h1>わたしのまちマップ</h1><div id="map"></div>
+<script>
+const map=L.map('map').setView([33.95,131.25],13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+ attribution:'&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+fetch('./mapdata.geojson').then(r=>r.json()).then(data=>{
+ const layer=L.geoJSON(data,{
+  onEachFeature:(feature,marker)=>{
+   const p=feature.properties||{};
+   const lines=[];
+   if(p.name) lines.push(`<strong>${p.name}</strong>`);
+   if(p.category) lines.push(`カテゴリー：${p.category}`);
+   if(p.address) lines.push(`住所：${p.address}`);
+   if(p.description) lines.push(p.description);
+   marker.bindPopup(lines.join('<br>'));
+  }
+ }).addTo(map);
+ if(layer.getBounds().isValid()) map.fitBounds(layer.getBounds(),{padding:[20,20]});
+});
+</script>
+</body></html>
