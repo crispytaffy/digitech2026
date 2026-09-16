@@ -1,11 +1,8 @@
-# 作成したマップをGitHub Pagesで公開してみよう 🌐🗺️
+# 作成したマップをGitHub Pagesで公開する
 
-Google
-Colabで作成したマップは、HTMLファイルとして保存するとWebブラウザで表示できます。
+Google Colabで作成したマップは、HTMLファイルとして保存するとWebブラウザで表示できます。
 
-ここでは、Colabで作成した **GeoJSON（`mapdata.geojson`）** と
-**マップ（`index.html`）** をGitHubにアップロードし、GitHub
-Pagesを使ってWeb上に公開します。
+ここでは、Colabで作成した **GeoJSON（`mapdata.geojson`）** と **マップ（`index.html`）** をGitHubにアップロードし、GitHub Pagesを使ってWeb上に公開します。
 
 > この手順は **GitHubアカウントを持っている方向けの発展編** です。
 
@@ -16,16 +13,13 @@ Pagesを使ってWeb上に公開します。
 まず、Google Colabで最後に作成したマップをHTMLファイルとして保存します。
 
 マップを表示しているセルより後に、新しいセルを追加します。
-
-最後に表示しているマップの変数名が `m`
-の場合は、次のコードを実行します。
+最後に表示しているマップの変数名が `m` の場合は、次のコードを実行します。
 
 ``` python
 m.save("index.html")
 ```
 
-カスタマイズしたマップを `m_custom`
-という名前で作成している場合は、次のように変数名を合わせます。
+カスタマイズしたマップを `m_custom` という名前で作成している場合は、次のように変数名を合わせます。
 
 ``` python
 m_custom.save("index.html")
@@ -35,8 +29,7 @@ m_custom.save("index.html")
 
 ### ポイント
 
-`index.html`
-には、Foliumで作成したマップの表示内容がHTMLとして保存されます。
+`index.html` には、Foliumで作成したマップの表示内容がHTMLとして保存されます。
 
 そのため、Colabでピンの色やポップアップなどをカスタマイズしている場合は、**最後に完成したマップを保存**してください。
 
@@ -70,7 +63,7 @@ mapdata.geojson
 
 ## 3. GitHubに新しいリポジトリを作る
 
-GitHubにログインし、新しいリポジトリを作成します。
+GitHubにログインし、新しいリポジトリを作成します。  
 
 GitHubの画面右上にある **「＋」→「New repository」** を選びます。
 
