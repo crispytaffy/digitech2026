@@ -91,4 +91,4 @@ Pythonを実行してエラーが出た場合も、生成AIに相談できます
 
 -----
 
-NEXT -> [つくった地図をWebページとして表示する](GitHubPages.md)
+NEXT -> [つくった地図をWebページとして表示する](BROWSE_COLAB_MAP.md)
