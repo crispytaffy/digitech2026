@@ -11,11 +11,13 @@
 
 ### 【その1】オープンデータを加工して、マップにピンを立てます。
 ピンにカーソルを合わせると、名称が表示されます。カスタマイズもOK！
+
 ![image](img/sample.png)
 
 ### 【その２】つくったマップをWebページとして表示してみます。
-GitHubアカウントを持っている方は、GitHub Pagesを使ったWeb公開にも挑戦できます。
+GitHubアカウントを持っている方は、GitHub Pagesを使ったWeb公開にも挑戦できます。  
 
+[Sample「宇部市公衆トイレマップ」](https://crispytaffy.github.io/mymap2026/)
 ---
 
 ## 0. 事前準備
