@@ -40,6 +40,8 @@
 
 観光スポット、公共施設、公園、子育て、防災、バリアフリー情報などを探してみましょう。
 
+今回のサンプルは、[宇部市「公衆トイレ一覧」](https://yamaguchi-opendata.jp/ckan/dataset/352021_ubetoile)データを用いています。
+
 ---
 
 ## 2. データを共通フォーマットに整えよう
@@ -130,6 +132,7 @@ NotebookではFoliumを使って地図を表示します。FoliumはLeafletを�
 - ポップアップに表示する情報を増やす
 
 生成AIに相談してもOKです。
+今回はGoogle Colabで実行しているので、そのままGeminiを使ってカスタマイズもできます。
 
 ### 生成AIへの質問例
 
@@ -140,7 +143,7 @@ NotebookではFoliumを使って地図を表示します。FoliumはLeafletを�
 > `name`、`latitude`、`longitude` の列名に揃える方法を教えてください。
 > その他の列は削除せず残したいです。
 
-[カスタマイズ方法はこちら](CUSTOMIZE.md)
+[「公衆トイレ一覧」を例にしたカスタマイズ方法はこちら](CUSTOMIZE.md)
 
 ---
 
