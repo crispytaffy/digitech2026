@@ -159,6 +159,8 @@ map/
 
 GitHub PagesなどのWebサーバー上に置くと、Webマップとして表示できます。
 
+また、先ほどGoogle Colabで作成したマップをGitHub Pagesで公開することもできます。[こちら](BROWSE_COLAB_MAP.md)の手順を参考にしてください。
+
 ---
 
 ## License
