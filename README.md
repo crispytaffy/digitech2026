@@ -45,17 +45,13 @@ Foliumでカスタマイズ       HTML + Leaflet
   ----------------------------------------- ----------------------------------------
   [Slide.md](Slide.md)                      ハンズオン本編・Marpスライド
 
-  [Google Colab                             Excel / CSV → GeoJSON変換・Folium表示
-  Notebook](colab/excel_to_geojson.ipynb)   
+  [Google Colab Notebook](colab/excel_to_geojson.ipynb)                     Excel / CSV → GeoJSON変換・Folium表示
 
-  [AI_CUSTOMIZE.md](AI_CUSTOMIZE.md)        生成AIを使ったFoliumのカスタマイズ方法
+  [AI_CUSTOMIZE.md](AI_CUSTOMIZE.md)        生成AIを使ったFoliumのカスタマイズ方法（Google Colabでのカスタマイズ）
 
-  [GITHUB_PAGES.md](GITHUB_PAGES.md)        HTML + Leaflet + GitHub
-                                            PagesによるWeb公開
+  [GITHUB_PAGES.md](GITHUB_PAGES.md)        HTML + Leaflet + GitHub （PagesによるWeb公開とカスタマイズ）
 
-  [CUSTOMIZE.md](CUSTOMIZE.md)              サンプルデータを使ったカスタマイズ例
-
-  [map/](map/)                              Leaflet Webマップのサンプル
+  [map/](map/)                              Leaflet Webマップのサンプルコード
   ----------------------------------------------------------------------------------
 
 ## 必要なもの
